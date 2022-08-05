@@ -1,3 +1,9 @@
+//*******************************
+//* desarrollado por :
+//*   Melissa Huamani Tintaya 
+//*   Gilverto Rata Mataque
+//******************************+
+
 #include <windows.h>  
 #include <GL/glut.h>  
 #include <stdlib.h>
@@ -14,8 +20,6 @@ void Iniciar(){
 	glLoadIdentity();
 
 }
-
-
 void Ejes(){
 	glBegin(GL_LINES);
 	glColor3f(1.f,0,0);
@@ -38,7 +42,7 @@ void Ejes(){
 }
 
 float angulo=0.0f;
-int refreshMills=5;
+int refreshMills=10;
 
 void Timer(int value){
 	
@@ -83,23 +87,63 @@ void dibujar(){
     glPushMatrix(); /// / Guardar la configuración de la vista de matriz modelo 
     glTranslatef(-0.5f,0.4f,0.0f);    //traducción 
     glRotatef(angulo, 0.0f, 0.0f, 1.0f); // Rotar en grados 
+   //**************************  
+  //   SOL
+   //**************************  
     glBegin(GL_POLYGON);
-     glColor3d(0,0.8,0);
-     glVertex2d(4,14);
-     glVertex2d(6,14);
-     glVertex2d(6,12);
-     glVertex2d(4,12);
+    glColor3d(0.97,0.96,0.11);
+    glVertex2d(6.79,14.97);
+    glVertex2d(7,15);
+    glVertex2d(7.19,14.97);
+    glVertex2d(7.4,14.91);
+    glVertex2d(7.59,14.79);
+    glVertex2d(7.79,14.59);
+    glVertex2d(7.91,14.39);
+    glVertex2d(7.97,14.2);
+    glVertex2d(6.79,14.97);
+
+    glColor3d(0.97,0.96,0.11);
+	glVertex2d(6.79,14.97);
+	glVertex2d(7.97,14.2);
+	glVertex2d(7.99,14);
+    glVertex2d(7.97,13.81);
+    glVertex2d(7.91,13.6);
+    glVertex2d(7.82,13.44);
+    glVertex2d(7.59,13.21);
+    glVertex2d(7.41,13.1);
+    glVertex2d(6.79,14.97);
+    
+    glColor3d(0.97,0.96,0.11);
+	glVertex2d(6.79,14.97);
+	glVertex2d(7.41,13.1);
+	glVertex2d(7.21,13.03);	
+	glVertex2d(7,13.01);
+    glVertex2d(6.81,13.03);
+    glVertex2d(6.61,13.09);
+    glVertex2d(6.41,13.21);
+    glVertex2d(6.21,13.41);
+    glVertex2d(6.79,14.97);
+   
+  	glVertex2d(6.79,14.97);
+    glVertex2d(6.21,13.41);
+    glVertex2d(6.09,13.6);
+	glVertex2d(6.02,13.83);
+	glVertex2d(6.01,14);
+	glVertex2d(6.03,14.19);	
+	glVertex2d(6.1,14.42);
+    glVertex2d(6.21,14.59);
+    glVertex2d(6.79,14.97);
+    
+  	glVertex2d(6.79,14.97);
+   	glVertex2d(6.21,14.59);
+   	glVertex2d(6.41,14.79);
+    glVertex2d(6.6,14.91);
+    glVertex2d(6.79,14.97);  
     glEnd();
     glPopMatrix();  
     angulo += 0.2f;
+///******************************************************
 
-    glBegin(GL_TRIANGLES);
-     glColor3d(0.30,0.33,0.38);
-     glVertex2d(4,14);
-     glVertex2d(6,12);
-     glVertex2d(6,14);
-    glEnd();
-//	
 	   
     //puente 
     glBegin(GL_POLYGON);
@@ -964,7 +1008,25 @@ void dibujar(){
     glVertex2d(9.35,-1.39);
     glVertex2d(8.57,-1.43);
     glEnd(); 
-    
+     	glMatrixMode(GL_MODELVIEW);     // Operación en la matriz de Modelo-Vista 
+    //glLoadIdentity();  
+    glPushMatrix(); /// / Guardar la configuración de la vista de matriz modelo 
+    //glTranslatef(-0.5f,0.4f,0.0f);    //traducción 
+    glRotatef(angulo, 0.0f, 0.0f, 1.0f); // Rotar en grados 
+    glBegin(GL_TRIANGLES);
+     glColor3d(0,0,0);
+     glVertex2d(5,13);
+     glVertex2d(3.48,12.02);
+     glVertex2d(4,13);
+     
+     glVertex2d(3.48,12.02);
+     glVertex2d(3,13);
+     glVertex2d(2,13);
+     
+    glEnd();
+    glPopMatrix();  
+    angulo += 0.2f;
+//	
  glFlush();
 }
 
